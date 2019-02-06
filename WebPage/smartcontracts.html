@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+<title>Smart SLA</title>
+<meta charset="utf-8">
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<![endif]-->
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/main.css" id="color-switcher-link">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/fonts.css">
+<script src="js/vendor/modernizr-2.6.2.min.js">
+</script>
+<script src="js/dist/web3.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Date', 'Amount', 'Balance'],
+          ['2017-12-01 13:50',  10.98,      65.98],
+          ['2017-12-01 19:12',  8.12,      46.45],
+          ['2017-12-02 08:40',  23.7,       71.65],
+          ['2017-12-02 12:30',  5.9,      64.6]
+        ]);
+
+        var options = {
+		  backgroundColor: 'lightgrey',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));		
+        chart.draw(data, options);		
+      }
+</script>
+<!--[if lt IE 9]>
+<script src="js/vendor/html5shiv.min.js">
+</script>
+<script src="js/vendor/respond.min.js">
+</script>
+<![endif]-->
+</head>
+<body>
+<div class="preloader">
+<div class="preloader_image">
+</div>
+</div>
+<!--[if lt IE 9]>
+<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+<!-- search modal -->
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+<div class="widget widget_search">
+<form role="search" method="get" class="searchform form-inline" action="/">
+<div class="form-group">
+<input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
+</div>
+<button type="submit">Search</button>
+</form>
+</div>
+</div>
+<!-- wrappers for visual page editor and boxed version of template -->
+<div id="canvas">
+	<div id="box_wrapper" class="">
+
+
+
+	<section class="page_toplogo ds section_padding_top_15 section_padding_bottom_0 table_section table_section_md">
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-sm-12 col-md-push-4 text-center">
+<a href="./" class="logo top_logo top_offset_logo" data-mce-href="./">
+<img src="images/logo-light.png" alt="" data-mce-src="images/logo-light.png">
+</a>
+</div>
+<div class="col-md-4 col-sm-6 col-md-pull-4 text-center text-md-left">HOME</div>
+<!--div class="col-md-4 col-sm-6 text-center text-md-right hidden-xs">
+<div class="widget widget_search inline-block">
+<form method="get" class="searchform form-inline" action="./">
+<div class="form-group-wrap">
+<div class="form-group margin_0">
+<label class="sr-only" for="topline-search">Search for:</label>
+<input id="topline-search" type="text" value="" name="search" class="form-control" placeholder="">
+</div>
+<button type="submit" class="theme_button color4 no_bg_button">Search</button>
+</div>
+</form>
+</div>
+</div-->
+<div class="header_right_buttons display_table_cell text-right hidden-xs">
+    <div class="widget widget_search inline-block">
+        <form method="get" class="searchform form-inline" action="./">
+            <div class="form-group-wrap">
+                <div class="form-group margin_0">
+                    <label class="sr-only" for="topline-search">Search for:</label>
+                    <input id="topline-search" type="text" value="" name="search" class="form-control"
+                    placeholder="Search...">
+                </div>
+                <button type="submit" class="theme_button color1 no_bg_button">Search</button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+</div>
+</section>
+<section class="intro_section page_mainslider ds">
+<div class="flexslider" data-dots="false" data-nav="true">
+<ul class="slides">
+<li>
+<img src="images/slide04.jpg" alt="">
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<div class="slide_description_wrapper">
+<div class="slide_description">
+<div class="intro-layer" data-animation="fadeInUp">
+<h2 class="thin grey">
+<strong>Welcome </strong> to<br><strong> Smart Settlement</strong></h2>
+</div>
+<div class="intro-layer" data-animation="fadeInUp">
+<div class="grey"><BR><BR><BR><BR>
+<p>Single platform to service an agreement between organizations</p>
+</div></div>
+<div class="intro-layer" data-animation="fadeInUp">
+<p class="topmargin_50">
+<a href="#0" class="theme_button color3" data-mce-href="#0">About</a>
+</p>
+</div>
+</div>
+<!-- eof .slide_description -->
+</div>
+<!-- eof .slide_description_wrapper -->
+</div>
+<!-- eof .col-* -->
+</div>
+<!-- eof .row -->
+</div>
+<!-- eof .container -->
+</li>
+<li>
+<img src="images/slide05.jpg" alt="">
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<div class="slide_description_wrapper">
+<div class="slide_description">
+<div class="intro-layer" data-animation="fadeInUp">
+<h2 class="thin white">
+<strong>Contract</strong>
+<br> </h2>
+</div>
+<div class="intro-layer" data-animation="fadeInUp">
+<div class="panel panel-primary" style="max-height: 360px; overflow-y: scroll">
+  <pre><bold>1. Agreement Overview</bold>
+This Agreement represents a Service Level Agreement (“SLA” or “Agreement”) between
+Company name. and Customer for the provisioning of IT services required to support and
+sustain the Product or service.
+This Agreement remains valid until superseded by a revised agreement mutually endorsed by
+the stakeholders.
+This Agreement outlines the parameters of all IT services covered as they are mutually
+understood by the primary stakeholders. This Agreement does not supersede current
+processes and procedures unless explicitly stated herein.
+
+
+2. Goals & Objectives
+The purpose of this Agreement is to ensure that the proper elements and commitments are in
+place to provide consistent IT service support and delivery to the Customer(s) by the Service
+Provider(s).
+The goal of this Agreement is to obtain mutual agreement for IT service provision between
+the Service Provider(s) and Customer(s).
+The objectives of this Agreement are to:
+• Provide clear reference to service ownership, accountability, roles and/or
+responsibilities.
+• Present a clear, concise and measurable description of service provision to the
+customer.
+• Match perceptions of expected service provision with actual service support &
+delivery.
+
+
+3. Stakeholders
+The following Service Provider(s) and Customer(s) will be used as the basis of the
+Agreement and represent the primary stakeholders associated with this SLA:
+IT Service Provider(s): Company name. (“Provider”)
+IT Customer(s): Customer (“Customer”)
+
+
+4. Periodic Review
+This Agreement is valid from the Effective Date outlined herein and is valid until further
+notice. This Agreement should be reviewed at a minimum once per fiscal year; however, in
+lieu of a review during any period specified, the current Agreement will remain in effect.
+The Business Relationship Manager (“Document Owner”) is responsible for facilitating
+regular reviews of this document. Contents of this document may be amended as required,
+provided mutual agreement is obtained from the primary stakeholders and communicated to
+all affected parties. The Document Owner will incorporate all subsequent revisions and
+obtain mutual agreements / approvals as required.
+Business Relationship Manager: Company name
+Review Period: Bi-Yearly (6 months)
+Previous Review Date: 01-08-2010
+Next Review Date: 01-12-2011
+
+
+5. Service Agreement
+The following detailed service parameters are the responsibility of the Service Provider in the
+ongoing support of this Agreement.
+
+5.1. Service Scope
+The following Services are covered by this Agreement;
+o Manned telephone support
+o Monitored email support
+o Remote assistance using Remote Desktop and a Virtual Private Network where
+available
+o Planned or Emergency Onsite assistance (extra costs apply)
+o Monthly system health check
+
+5.2. Customer Requirements
+Customer responsibilities and/or requirements in support of this Agreement include:
+• Payment for all support costs at the agreed interval.
+• Reasonable availability of customer representative(s) when resolving a
+service related incident or request.
+
+5.3. Service Provider Requirements
+Service Provider responsibilities and/or requirements in support of this Agreement
+include:
+• Meeting response times associated with service related incidents.
+• Appropriate notification to Customer for all scheduled maintenance.
+
+5.4. Service Assumptions
+Assumptions related to in-scope services and/or components include:
+• Changes to services will be communicated and documented to all
+stakeholders.
+
+
+<bold>6. Service Management</bold>
+Effective support of in-scope services is a result of maintaining consistent service levels. The
+following sections provide relevant details on service availability, monitoring of in-scope
+services and related components.
+
+6.1. Service Availability
+Coverage parameters specific to the service(s) covered in this Agreement are as follows:
+• Telephone support : 9:00 A.M. to 5:00 P.M. Monday – Friday
+o Calls received out of office hours will be forwarded to a mobile phone and
+best efforts will be made to answer / action the call, however there will be
+a backup answer phone service
+• Email support: Monitored 9:00 A.M. to 5:00 P.M. Monday – Friday
+o Emails received outside of office hours will be collected, however no
+action can be guaranteed until the next working day
+• Onsite assistance guaranteed within 72 hours during the business week
+
+6.2. Service Requests
+In support of services outlined in this Agreement, the Service Provider will respond to
+service related incidents and/or requests submitted by the Customer within the following
+time frames:
+• 0-8 hours (during business hours) for issues classified as High priority.
+• Within 48 hours for issues classified as Medium priority.
+• Within 5 working days for issues classified as Low priority.
+Remote assistance will be provided in-line with the above timescales dependent on the
+priority of the support request.
+</pre></div>
+</div>
+<div class="intro-layer" data-animation="fadeInUp">
+<p class="topmargin_50">
+<a href="CustomerSLATemplate.pdf" class="theme_button color1" data-mce-href="#0" download>View PDF</a>
+</p>
+</div>
+</div>
+<!-- eof .slide_description -->
+</div>
+<!-- eof .slide_description_wrapper -->
+</div>
+<!-- eof .col-* -->
+</div>
+<!-- eof .row -->
+</div>
+<!-- eof .container -->
+</li>
+<li>
+<img src="images/slide01.jpg" alt="">
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<div class="slide_description_wrapper" style="position: relative; z-index: 5; left: 0px; top: 0px;">
+<div class="slide_description">
+<div class="intro-layer" data-animation="fadeInUp">
+<h2 class="thin light-grey">
+<strong>Account</strong> Activity &amp;<br> <strong>Transactions</strong></h2>
+</div>
+<div class="intro-layer" data-animation="fadeInUp">
+<p>Latest <strong>Transactions</strong>
+<a name="Transactions_chart">
+<div id="curve_chart" style="width: 950px; height: 250px"></div></a>
+</p>
+</div>
+<div class="intro-layer" data-animation="fadeInUp">
+<p class="topmargin_50">
+<a href="#Transactions_chart" class="theme_button color4">Download Activity Graph</a>
+</p>
+</div>
+</div>
+<!-- eof .slide_description -->
+</div>
+<!-- eof .slide_description_wrapper -->
+</div>
+<!-- eof .col-* -->
+</div>
+<!-- eof .row -->
+</div>
+<!-- eof .container -->
+</li>
+</ul>
+</div>
+<!-- eof flexslider -->
+</section>
+<section class="cs columns_padding_0 section_padding_top_0 section_padding_bottom_0 columns_margin_bottom_10" style="position : static">
+<div class="container">
+<div class="row">
+<div class="col-md-2 col-sm-6 to_animate" data-animation="pullUp">
+<div class="teaser text-center">
+<div class="teaser_icon main_bg_color round size_small">
+<i class="fa fa-recycle" aria-hidden="true">
+</i>
+</div>
+<h4 class="poppins">My Wallet<br>
+</h4>
+<p id="ethAmount">55.872<br>
+</p>
+<script>
+var Web3 = require('web3');
+var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+
+var accounts = web3.eth.accounts;
+
+var provider = accounts[0];
+var consumer = accounts[1];
+
+console.log("Balance of account 0: %s", web3.fromWei(web3.eth.getBalance(accounts[0])).toString(10));
+console.log("Balance of account 1: %s", web3.fromWei(web3.eth.getBalance(accounts[1])).toString(10));
+function updateAmount(){
+  document.getElementById("ethAmount").innerHTML = web3.fromWei(web3.eth.getBalance(accounts[0])).toString(5);
+}
+setInterval(updateAmount, 4000);
+</script>
+</div>
+</div>
+<div class="col-md-3 col-sm-6 to_animate" data-animation="pullUp">
+<div class="teaser text-center">
+<div class="teaser_icon main_bg_color round size_small">
+<i class="fa fa-volume-down" aria-hidden="true">
+</i>
+</div>
+<h4 class="poppins">My Account</h4>
+<p>8dh28hd920ujso0q-i2k0-s1-hxd8<br>
+</p>
+</div>
+</div>
+<div class="col-md-2 col-sm-6 clear-sm to_animate" data-animation="pullUp">
+<div class="teaser text-center">
+<div class="teaser_icon main_bg_color round size_small">
+<i class="fa fa-bars" aria-hidden="true">
+</i>
+</div>
+<h4 class="poppins">Exchange<br>
+</h4>
+<p>$476.36
+</p>
+</div>
+</div>
+<div class="col-md-3 col-sm-6 clear-sm to_animate" data-animation="pullUp">
+<div class="teaser text-center">
+<div class="teaser_icon main_bg_color round size_small">
+<i class="fa fa-infraction" aria-hidden="true">
+</i>
+</div>
+<h4 class="poppins">Report Infractions<br>
+</h4>
+<p>Last reported on Nov 1, 2017
+</p>
+</div>
+</div>
+<div class="col-md-2 col-sm-6 to_animate selected" data-animation="pullUp">
+<div class="teaser text-center">
+<div class="teaser_icon main_bg_color round size_small">
+<i class="fa fa-leaf" aria-hidden="true">
+</i>
+</div>
+<h4 class="poppins">Community</h4>
+<p>Ethereum</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="ds columns_padding_0 section_padding_top_0 section_padding_bottom_5" style="background-image: url(images/!uploads/20329-sasuke-uchiha-naruto-1920x1080-anime-wallpaper.jpg)">
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<table class="mce-item-table">
+<caption><h4><strong>Trade History</strong></h4></caption>
+<tbody>
+<tr><bold>
+<th>Date</th>
+<th>Sender</th>
+<th>Receiver</th>
+<th>Amount</th>
+<th>Balance</th></bold>
+</tr>
+<tr>
+<td>2017-12-01 13:50</td>
+<td>mnxksmxjiw9udj9wxnjwijc3e3e33</td>
+<td>8dh28hd920ujso0q-i2k0-s1-hxd8</td>
+<td>10</td>
+<td>63</td>
+</tr>
+<tr>
+<td>2017-12-01 19:12</td>
+<td>8dh28hd920ujso0q-i2k0-s1-hxd8</td>
+<td>hxdw78ydhx82xu33d89wuid9oj123</td>
+<td>8</td>
+<td>55</td>
+</tr>
+<tr>
+<td>2017-12-02 08:30</td>
+<td>d92uj93ujd98ihx83dincjdknc93c</td>
+<td>8dh28hd920ujso0q-i2k0-s1-hxd8</td>
+<td>12</td>
+<td>67</td>
+</tr>
+<tr>
+<td>2017-12-02 12:30</td>
+<td>bzshqsgbzvxyhwbxuiwhxxwuhxiw2</td>
+<td>8dh28hd920ujso0q-i2k0-s1-hxd8</td>
+<td>2</td>
+<td>69</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- eof #box_wrapper -->
+</div>
+<!-- eof #box_wrapper and #canvas -->
+<script src="js/compressed.js">
+</script>
+<script src="js/main.js">
+</script>
+</body>
+</html>

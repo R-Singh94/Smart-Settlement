@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+<title>Search Page</title>
+<meta charset="utf-8">
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<![endif]-->
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/main.css" id="color-switcher-link">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/fonts.css">
+<style>
+.hidden{
+    display:none;
+}
+
+.unhidden{
+    display:block;
+}
+</style>
+<script type="text/javascript">
+function unhide(clickedButton, divID) {
+var item = document.getElementById(divID);
+if (item) {
+    if(item.className=='hidden ls ms columns_padding_0 section_padding_top_5 section_padding_bottom_5 table_section section_padding_top_20 section_padding_bottom_20 columns_margin_bottom_30 table_section_md'){
+        item.className = 'unhidden'
+    }else{
+        item.className = 'hidden'
+    }
+}}
+</script>
+<script src="js/vendor/modernizr-2.6.2.min.js">
+</script>
+<!--[if lt IE 9]>
+<script src="js/vendor/html5shiv.min.js">
+</script>
+<script src="js/vendor/respond.min.js">
+</script>
+<![endif]-->
+</head>
+<body>
+<div class="preloader">
+<div class="preloader_image">
+</div>
+</div>
+<!--[if lt IE 9]>
+<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+<!-- search modal -->
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+<div class="widget widget_search">
+<form role="search" method="get" class="searchform form-inline" action="/">
+<div class="form-group">
+<input type="button" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
+</div>
+<button type="submit" class="theme_button">Search</button>
+</form>
+</div>
+</div>
+<!-- wrappers for visual page editor and boxed version of template -->
+<div id="canvas" class="boxed">
+	<div id="box_wrapper" class="container">
+
+
+
+	<section id="quote" class="ls ms background_cover section_contact section_padding_100">
+<div class="container">
+<div class="row">
+<div class="col-sm-12 text-center">
+<p class="small-text highlight">Search</p>
+<h3 class="section_header"><strong>Trains</strong></h3>
+<form action="./">
+<div class="row">
+<div class="col-sm-4">
+<p class="form-group">
+<i class="highlight" aria-hidden="true">
+</i>
+<input type="text" aria-required="true" size="30" value="" name="origin" id="origin" class="form-control text-center" placeholder="Origin">
+</p>
+</div>
+<input type="hidden" name="mce_80" class="" style="">
+<div class="col-sm-4">
+<p class="form-group">
+<i class="highlight" aria-hidden="true">
+</i>
+<input type="text" aria-required="true" size="30" value="" name="destination" id="destination" class="form-control text-center" placeholder="Destination">
+</p>
+</div>
+<input type="hidden" name="mce_81" class="" style="">
+<div class="col-sm-4">
+<p class="form-group">
+<i class="highlight" aria-hidden="true">
+</i>
+<input type="datetime" aria-required="true" size="30" value="" name="departure" id="departure" class="form-control text-center" placeholder="Departure Date">
+</p>
+</div>
+</div>
+<div class="row topmargin_10">
+<div class="col-sm-12">
+<p>
+<button type="text" class="theme_button color3 wide_button margin_0"><a href="searchResults.html">Search</a></button>
+</p>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- eof #box_wrapper -->
+</div>
+<!-- eof #box_wrapper and #canvas -->
+<script src="js/compressed.js">
+</script>
+<script src="js/main.js">
+</script>
+</body>
+</html>
